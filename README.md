@@ -1,5 +1,7 @@
 # Debloat Windows 10
 
+#Made some modifications, by Nahid Sarker
+
 **Note about Creators Update:** These scripts have *not* been tested with the
 Creators Update. Anything may happen, be prepared. I'll look into relevant
 changes and recent issues when the update is released / pushed on to everyone.

@@ -1,3 +1,7 @@
+#Edited By Nahid Sarker
+#Date modified: 11/15/2017
+#Tested on Windwos 10 Pro, Ent
+
 #   Description:
 # This script removes unwanted Apps that come with Windows. If you  do not want
 # to remove certain Apps comment out the corresponding lines below.
@@ -107,6 +111,83 @@ foreach ($app in $apps) {
         Where-Object DisplayName -EQ $app |
         Remove-AppxProvisionedPackage -Online
 }
+
+#Uninstall 3D Builder
+Get-AppxPackage *3dbuilder* | Remove-AppxPackage
+
+#Uninstall Alarms and Clock
+Get-AppxPackage *windowsalarms* | Remove-AppxPackage
+
+#Uninstall Calculator
+Get-AppxPackage *windowscalculator* | Remove-AppxPackage
+
+#Uninstall Calandar and Mail
+Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage
+
+#Uninstall Camera
+Get-AppxPackage *windowscamera* | Remove-AppxPackage
+
+#Uninstall Contact Support (Cant be removed)
+#Uninstall Cortana (Cant be removed)
+
+#Uninstall Get office
+Get-AppxPackage *officehub* | Remove-AppxPackage
+
+#Uninstall get skype
+Get-AppxPackage *skypeapp* | Remove-AppxPackage
+
+#Uninstall get started
+Get-AppxPackage *getstarted* | Remove-AppxPackage
+
+#Uninstall groove music
+Get-AppxPackage *zunemusic* | Remove-AppxPackage
+
+#Uninstall maps
+Get-AppxPackage *windowsmaps* | Remove-AppxPackage
+
+#Uninstall microsoft edge(Cant be removed)
+
+#Uninstall microsoft solitare collections
+Get-AppxPackage *solitairecollection* | Remove-AppxPackage
+
+#Uninstall money
+Get-AppxPackage *bingfinance* | Remove-AppxPackage
+
+#Uninstall movies and TV
+Get-AppxPackage *zunevideo* | Remove-AppxPackage
+
+#Uninstall news
+Get-AppxPackage *bingnews* | Remove-AppxPackage
+
+#Uninstall oenNote
+Get-AppxPackage *onenote* | Remove-AppxPackage
+
+#Uninstall people
+Get-AppxPackage *people* | Remove-AppxPackage
+
+#Uninstall phone companion
+Get-AppxPackage *windowsphone* | Remove-AppxPackage
+
+#Uninstall photos
+Get-AppxPackage *photos* | Remove-AppxPackage
+
+#Uninstall store
+#Get-AppxPackage *windowsstore* | Remove-AppxPackage
+
+#Uninstalll sports
+Get-AppxPackage *bingsports* | Remove-AppxPackage
+
+#Uninstall voice record
+Get-AppxPackage *soundrecorder* | Remove-AppxPackage
+
+#Uninstall weather
+Get-AppxPackage *bingweather* | Remove-AppxPackage
+
+#Uninstall feedback(cant be removed)
+
+#Uninstall xbox
+Get-AppxPackage *xboxapp* | Remove-AppxPackage
+
 
 # Prevents "Suggested Applications" returning
 force-mkdir "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Cloud Content"
